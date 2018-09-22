@@ -7,6 +7,34 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello</h1>
+    <h1>Create Your Character</h1>
+    
+    <form method="GET" action="/create">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" placeholder="Your Name">
+        <br>
+
+        <label for="character_name">Character's Name:</label>
+        <input type="text" id="character_name" placeholder="Character Name">
+        <br>
+
+        <label for="gender">Character's Gender</label>
+        <select id="gender">
+            <option value="">Character's Gender</option>
+            <option value="girl">Girl</option>
+            <option value="boy">Boy</option>
+        </select>
+        <br>
+
+        <label for="age">Character's Age</label>
+        <input type="number" id="age" placeholder="Character's Age">
+        <br>
+
+        <button type="submit">Create Character</button>
+    </form>
+
+    <footer>
+        <p>You can create your own character using your imagination</p>
+    </footer>
 </body>
 </html>
