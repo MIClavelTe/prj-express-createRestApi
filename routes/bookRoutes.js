@@ -13,9 +13,9 @@ router.post('/', function(req, res) {
 
     Book.create(bookData, function (error, book) {
         if (error) {
-          console.error('Error')
+            res.send('Fill in the title')
         } else {
-          console.log(bookData.title)
+            res.send(`You have created ${bookData.title}`)
         }
       })
 })

@@ -13,9 +13,9 @@ router.post('/', function(req, res) {
      
     Princess.create(princessData, function(error, princess) {
         if (error) {
-            console.error("Error")
+            res.send('Fill in the name')
         } else {
-            console.log(princessData.name)
+            res.send(`You have created ${princessData.name}`)
         }
     })
 })
