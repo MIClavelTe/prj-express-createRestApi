@@ -7,17 +7,20 @@ router.get('/', function(req, res) {
 })
 
 router.post('/', function(req, res) {
-    var princessData = {
-        name: req.body.name
-    }
+    // var princessData = {
+    //     name: req.body.name
+    // }
      
-    Princess.create(princessData, function(error, princess) {
-        if (error) {
-            res.send('Fill in the name')
-        } else {
-            res.send(`You have created ${princessData.name}`)
-        }
-    })
+    // Princess.create(princessData, function(error, princess) {
+    //     if (error) {
+    //         res.send('Fill in the name')
+    //     } else {
+    //         res.send(`You have created ${princessData.name}`)
+    //     }
+    // })
+
+    console.log(req.body)
+    res.send('OK')
 })
 
 

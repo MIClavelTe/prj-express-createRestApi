@@ -11,7 +11,7 @@ var db = mongoose.connection;
 
 app.use(express.static(path.join(__dirname, './src/public')))
 
-app.use(express.urlencoded())
+app.use(express.urlencoded({extended:false}))
 
 app.use('/princess', princessRoutes)
 app.use('/book', bookRoutes)

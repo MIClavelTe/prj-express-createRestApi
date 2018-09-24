@@ -9,12 +9,12 @@
 <body>
     <h1>Create A Princess</h1>
     
-    <form method="POST" action="/princess">
+    <form method="POST" action="/princess" id="formPrincess">
         <label for="name">Princess's Name:</label>
         <input type="text" id="name" name="name" placeholder="Name">
         <br>
 
-        <button type="submit">Create Princess</button>
+        <!-- <button type="submit" id="princessButton">Create Princess</button> -->
     </form>
 
     <h1>Create A Book</h1>
@@ -26,5 +26,32 @@
 
         <button type="submit">Create Book</button>
     </form>
+
+    <script src="/assets/jquery-3.3.1.min.js"></script>
+
+    <script>
+        $(document).on('click', '#princessButton', function(event) {
+            event.preventDefault()
+            console.log('Princess Button is clicked')
+            $.ajax({
+                method: 'POST',
+                url: '/princess',
+                data: {
+                    key: 'value'
+                }
+            })
+            .done(function( data, textStatus, jqXHR ) {
+                console.log(data)
+            })
+         })
+
+        var btn = $('<button>').attr({
+            'id': 'princessButton',
+            'type': 'submit'
+        })
+        btn.text("Create Princess")
+        var form = $('#formPrincess')
+        form.append(btn)
+    </script>
 </body>
 </html>
