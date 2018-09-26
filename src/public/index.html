@@ -19,39 +19,16 @@
 
     <h1>Create A Book</h1>
     
-    <form method="POST" action="/book">
+    <form method="POST" action="/book" id="formBook">
         <label for="name">Book Title:</label>
         <input type="text" id="title" name="title" placeholder="Title">
         <br>
 
-        <button type="submit">Create Book</button>
+        <!-- <button type="submit">Create Book</button> -->
     </form>
 
     <script src="/assets/jquery-3.3.1.min.js"></script>
 
-    <script>
-        $(document).on('click', '#princessButton', function(event) {
-            event.preventDefault()
-            console.log('Princess Button is clicked')
-            $.ajax({
-                method: 'POST',
-                url: '/princess',
-                data: {
-                    key: 'value'
-                }
-            })
-            .done(function( data, textStatus, jqXHR ) {
-                console.log(data)
-            })
-         })
-
-        var btn = $('<button>').attr({
-            'id': 'princessButton',
-            'type': 'submit'
-        })
-        btn.text("Create Princess")
-        var form = $('#formPrincess')
-        form.append(btn)
-    </script>
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>

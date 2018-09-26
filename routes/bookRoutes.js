@@ -7,17 +7,20 @@ router.get('/', function(req, res) {
 })
 
 router.post('/', function(req, res) {
-    var bookData = {
-        title: req.body.title
-    }
+    // var bookData = {
+    //     title: req.body.title
+    // }
 
-    Book.create(bookData, function (error, book) {
-        if (error) {
-            res.send('Fill in the title')
-        } else {
-            res.send(`You have created ${bookData.title}`)
-        }
-      })
+    // Book.create(bookData, function (error, book) {
+    //     if (error) {
+    //         res.send('Fill in the title')
+    //     } else {
+    //         res.send(`You have created ${bookData.title}`)
+    //     }
+    //   })
+
+    console.log(req.body)
+    res.send('OK')
 })
 
 
